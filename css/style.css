@@ -1,0 +1,13 @@
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+hr {
+  width: 50%;
+}
+.light {
+  text-align: center;
+}
