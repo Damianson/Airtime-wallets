@@ -1,1 +1,1 @@
-web: python wallet.py
+web: gunicorn wallet:app
