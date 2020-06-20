@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>WalletsAir</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">WalletsAir</a>
+        </div>
+      </nav>
+      <br><br>
+      <div class="valign-wrapper">
+      <div class="row">
+        <div class="cardPos">
+          <div class="card">
+            <div class="card-image">
+                <h2 class="center light-blue-text"><i class="material-icons">done_all</i></h2>
+            </div>
+            <div class="card-content">
+              <p>
+                  {{ message }}
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="{{ url_for('form') }}">Go back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <br><br><br><br><br><br><br><br><br>
+      <footer class="page-footer orange">
+        <div class="footer-copyright">
+          <div class="container">
+          Made by <a class="orange-text text-lighten-3" href="https://github.com/Damianson">@Damianson</a> Email: damiansonuchegbu2017@gmail.com
+          </div>
+        </div>
+      </footer>
+    
+    
+      <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+    
+      </body>
+    </html>

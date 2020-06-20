@@ -11,3 +11,9 @@ hr {
 .light {
   text-align: center;
 }
+
+.cardPos {
+  margin-left: auto;
+  margin-right: auto;
+}
+
