@@ -7,8 +7,8 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
@@ -18,22 +18,22 @@
   <br><br>
 
   <div class="row">
-    <form class="col s12">
+    <form class="col s12" action="{{ url_for('result') }}" method="POST">
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="my public key" id="publicKey" type="text" class="validate" required>
+          <input placeholder="my public key" id="publicKey" type="text" name="publicKey" class="validate" required>
           <label for="publicKey">Public Key</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="my secret key" id="secretKey" type="text" class="validate" required>
+          <input placeholder="my secret key" id="secretKey" type="text" name="secretKey" class="validate" required>
           <label for="secretKey">Secret Key</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <select id="airtime" required>
+          <select  name="airtime" id="airtime" required>
             <option value="" disabled selected>Choose Airtime provider</option>
             <option value="airtel">Airtel</option>
             <option value="mtn">MTN</option>
@@ -47,13 +47,13 @@
     
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="Airtime amount" id="amount" type="number" class="validate" required>
+          <input placeholder="Airtime amount" id="amount" type="number" name="amount" class="validate" required>
           <label for="amount">Airtime amount</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="08000000000" id="number" type="number" class="validate" required>
+          <input placeholder="08000000000" id="number" type="number" name="number" class="validate" required>
           <label for="number">Phone Number</label>
         </div>
       </div>
@@ -66,7 +66,7 @@
   <footer class="page-footer orange">
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">@Damianson</a> Email: damiansonuchegbu2017@gmail.com
+      Made by <a class="orange-text text-lighten-3" href="https://github.com/Damianson">@Damianson</a> Email: damiansonuchegbu2017@gmail.com
       </div>
     </div>
   </footer>
@@ -74,8 +74,8 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
 
   </body>
 </html>

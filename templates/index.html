@@ -7,18 +7,18 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">WalletsAir</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="form.html">Buy Airtime</a></li>
+        <li><a href="{{ url_for('form') }}">Buy Airtime</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="form.html">Buy Airtime</a></li>
+        <li><a href="{{ url_for('form') }}">Buy Airtime</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -31,7 +31,7 @@
         <h5 class="header col s12 light">A website for seamlessly buying airtime using your Wallets Africa wallet</h5>
       </div>
       <div class="row center">
-        <a href="form.html" id="download-button" class="btn-large waves-effect waves-light orange">Buy Airtime</a>
+        <a href="{{ url_for('form') }}" id="download-button" class="btn-large waves-effect waves-light orange">Buy Airtime</a>
       </div>
       <br><br>
 
@@ -80,7 +80,7 @@
   <footer class="page-footer orange">
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">@Damianson</a> Email: damiansonuchegbu2017@gmail.com
+      Made by <a class="orange-text text-lighten-3" href="https://github.com/Damianson">@Damianson</a> Email: damiansonuchegbu2017@gmail.com
       </div>
     </div>
   </footer>
@@ -88,8 +88,8 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
 
   </body>
 </html>
